@@ -6,20 +6,20 @@ var arrQuote = [
     {"Albert Einstein": "Life is like riding a bicycle. To keep your balance, you must keep moving."}
 ];
 
-// Add quote
+// Add quote on click
 $(document).ready(function() {
     $("#newQuote").on("click", function() {
-        //var str = JSON.stringify(arrQuote);
-        //$(".quote").html(str);
         var html = "";
-        arrQuote.forEach(function(val) {
-            var keys = Object.keys(val);
-            html += "<div>";
-            keys.forEach(function(key) {
-                html += "\"" + val[key] + "\"" + "<br>" + key + "<br>";
-            });
-            html += "</div";
-        });
+        var i = 0;
+        function genNumberOfQuote() {
+            i = Math.floor(Math.random()*arrQuote.length);
+            return i;
+        }
+        genNumberOfQuote();
+        var quoteObject = arrQuote[i];
+        var keyAuthor = Object.getOwnPropertyNames(arrQuote[i]).toString();
+        var keyQuote = arrQuote[i][keyAuthor];
+        html += "<div>\"" + keyQuote + "\"<br>" + keyAuthor + "<br></div>";
         $(".quote").html(html);
     });
 });
