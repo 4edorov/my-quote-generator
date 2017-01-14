@@ -1,3 +1,9 @@
+body {
+    background: 50% 0 no-repeat;
+    color: aliceblue;
+    margin-bottom: 41px;
+}
+
 .carousel {
     height: 350px !important;
     overflow: hidden;
@@ -19,4 +25,29 @@
 
 .carousel-caption {
     top: 250px;
+}
+
+.buttonClick {
+    margin: 25px 25px 25px 25px;
+}
+
+.quoteField {
+    margin: 25px 25px 155px 25px;
+    border: 2px solid #264b6d;
+    background-color: #2b5691;
+    border-radius: 5px;
+    font-family: Cinzel;
+    font-size: 22px;
+    
+}
+
+.textNamePage {
+    font-size: 36px;
+    color: aliceblue;
+}
+
+.textFooter {
+    font-family: Sofia;
+    font-size: 22px;
+    color: deepskyblue;
 }
