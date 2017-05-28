@@ -1,4 +1,3 @@
-
 // Array with quotes
 var arrQuote = [
     {"Oscar Wilde": "To live is the rarest thing in the world. Most people exist, that is all."},
@@ -41,7 +40,13 @@ $(document).ready(function() {
         var quoteObject = arrQuote[i];
         var keyAuthor = Object.getOwnPropertyNames(arrQuote[i]).toString();
         var keyQuote = arrQuote[i][keyAuthor];
-        html += "<div class='quoteField'>\"" + keyQuote + "\"<br>" + "<i>" + keyAuthor + "</i>" + "<br></div>";
+        html += "<div class='quoteField'>\"" +
+          keyQuote +
+          "\"<br>" +
+          "<i>" +
+          keyAuthor +
+          "</i>" +
+          "<br></div>";
         $(".quote").html(html);
     });
 });
@@ -49,7 +54,16 @@ $(document).ready(function() {
 //Change body background depend from time
 var nowTime = new Date();
 var nowHour = nowTime.getHours(nowTime);
-var bgItem = (nowHour >= 6 && nowHour < 12) ? 'url(http://svoya.ucoz.ru/_ph/24/943750254.jpg)' : (nowHour >= 12 && nowHour < 18) ? 'url(http://www.gandex.ru/upl/oboi/gandex.ru-20989_8bc6916761c579dcbe15b96123f1e4b2.jpg)' : (nowHour >= 18 && nowHour <= 23) ? 'url(http://wallpaperpixel.com/tr/download/g%C3%BCn-bat%C4%B1m%C4%B1-yol-1920x1080.jpg)' : 'url(http://pokupkivinternete.ru/poleznye-sovety/img/49817.jpg)';
+var bgItem = (nowHour >= 6 && nowHour < 12) ?
+  'url(./img/1.jpg)'
+  :
+  (nowHour >= 12 && nowHour < 18) ?
+    'url(./img/2.jpg)'
+    :
+    (nowHour >= 18 && nowHour <= 23) ?
+      'url(./img/3.jpg)'
+      :
+      'url(./img/4.jpg)';
 $(document).ready(function() {
     $('body').css('background-image', bgItem);
 });
